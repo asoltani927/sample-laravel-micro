@@ -15,7 +15,7 @@ class BalanceTest extends TestCase
      */
     public function test_example()
     {
-        $response = $this->get('/api/users/balance?user_id=55');
+        $response = $this->get('/api/users/balance?user_id='.random_int(1, 55));
         $response->assertStatus(200);
     }
 }

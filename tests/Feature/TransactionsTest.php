@@ -18,7 +18,7 @@ class TransactionsTest extends TestCase
     public function test_example()
     {
         $response = $this->post('/api/transactions', [
-            'user_id' => 55,
+            'user_id' => random_int(1, 55),
             'amount' => random_int(1000, 100000)
         ]);
 
