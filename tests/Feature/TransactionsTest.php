@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -12,6 +13,7 @@ class TransactionsTest extends TestCase
      * A basic feature test example.
      *
      * @return void
+     * @throws Exception
      */
     public function test_example()
     {
