@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GettingBalanceRequest;
 use App\Models\Balance;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class BalancesController extends Controller
     // here we can make a request validation class
     // but I continue it with a quick way
     //
-    public function getBalance(Request $req)
+    public function getBalance(GettingBalanceRequest $req)
     {
         $model = null;
         if ($req->filled('user_id')) {

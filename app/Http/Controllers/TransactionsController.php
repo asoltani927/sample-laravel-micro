@@ -23,6 +23,7 @@ class TransactionsController extends Controller
                 'amount' => $request->amount,
             ]);
 
+            // here can be converted to a service
             $balance = Balance::where('user_id', '=', $request->user_id)->first();
             if ($balance) {
                 $balance->amount = $balance->amount + $request->amount;
